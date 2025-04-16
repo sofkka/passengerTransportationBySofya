@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/icon_gps.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleAccount.css">
+    <title>Аккаунт пользователя</title>
+</head>
+
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <a href="index.html" style="text-decoration: none;" id="label-and-icon">
+                <div style="display: flex; align-items: center;">
+                    <img src="images/icon_project.png" alt="Иконка" id="label-and-icon">
+                </div>
+            </a>
+        </div>
+    </div>
+    <h2>Личный кабинет</h2>
+
+    <div class="profile-container">
+        <div id="profile-info"></div>
+        <div class="profile-actions">
+            <button class="button" id="edit-profile">Редактировать</button>
+            <button class="button" id="back-to-bookings">Назад к бронированиям</button>
+            <button class="button logout-button" id="logout-button">Выйти из аккаунта</button>
+        </div>
+    </div>
+
+    <script src="profile.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1f626ccc;
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D0F0F1;
+    padding: 1.5rem;
+    margin-top: 50px;
+}
+  
+  .header {
+    background-color: #D0F0F1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    z-index: 5;
+  }
+  
+  #label-and-icon {
+    width: 200px;
+    font-size: 20px;
+    margin-left: 100px;
+    cursor: pointer;
+  }
+  
+  #img-account {
+    width: 70px;
+    margin-left: 15px;
+    margin-right: 100px;
+  }
+
+.account-container {
+    background-color: rgba(230, 249, 247, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 50%;
+    margin-top: 80px;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.input-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group { position: relative; margin-bottom: 15px; }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .toggle-password:hover { opacity: 0.7; }
+
+        .button {
+            background-color: rgba(68, 161, 177, 0.8);
+            border: none;
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            margin-right: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            height: 45px;
+            animation: moveInBottom 0.5s ease-out;
+            animation-fill-mode: backwards;
+          }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button:active {
+            transform: translateY(4px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button-cancel {
+            background-color: #fca1a1;
+            color: #cc0000;
+        }
+
+        .logout-button {
+            background-color: #fca1a1;
+            color: #cc0000;
+        }
+        
+        .disabled-button {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .disabled-button:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+#booking-results {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(230, 249, 247, 0.8);
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px;
+    display: none;
+}
+        
+        .route-container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        .no-bookings-message {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .no-bookings-message h {
+            color: #1f626c;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        .message.error {
+            background-color: #ffe6e6;
+            border: 1px solid #ffcccc;
+            color: #cc0000;
+        }
+
+        .message.info {
+            background-color: #e6f3ff;
+            border: 1px solid #b3d9ff;
+            color: #004080;
+        }
+        
+
+.routes-list {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(230, 249, 247, 0.8);
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.routes-list h3 {
+    color: #1f626c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.routes-list p {
+    color: #555;
+    font-size: 18px;
+}
+
+.booking-item {
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-item h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.booking-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header {
+    background-color: rgba(230, 249, 247, 0.8);
+    color: #1f626c;
+    padding: 10px;
+    border-radius: 30px;
+    width: 15rem;
+    text-align: center;
+}
+
+.card-header h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.card-header-right span {
+    color: rgb(241, 143, 143);
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.card-header-price {
+    background-color: rgba(230, 249, 247, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    width: 12rem;
+    height: 61px;
+    font-size: 16pt;
+    margin-left: 20px;
+    margin-right: auto;
+    line-height: 42px;
+  }
+  
+  .card-header-price h3 {
+    display: inline-block;
+    margin: 0;
+  }
+
+
+.card-header-right h {
+    color: rgb(241, 143, 143);
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-body h {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.card-body button {
+    margin-top: 15px;
+    width: 200px;
+    height: 45px;
+}
+
+.transport-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.points div {
+    margin: auto;
+}
+
+.departure-destination {
+    background-color: rgba(230, 249, 247, 0.8);
+    width: 300px;
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.departure-destination h2 {
+    margin: 5px;
+}
+
+.time-in-route-arrow {
+    display: grid;
+}
+
+.time-in-route-arrow h2, svg {
+    margin: 0px;
+}
+
+.links {
+    margin: 15pt;
+    margin-bottom: 5pt;
+}
+
+.toggle-password {
+    margin-top: 12px;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+#text-my-bookings {
+    align-content: center;
+    margin-top: 0px;
+}
+
+#user-profile {
+    cursor: pointer;
+}
+
+.departure-destination-acc {
+    background-color: rgba(230, 249, 247, 0.8);
+    width: 250px;
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.departure-destination-acc h2 {
+    margin: 5px;
+}

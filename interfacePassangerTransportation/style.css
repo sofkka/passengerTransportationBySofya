@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #1f626ccc;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d0f0f1;
+  padding: 1.5rem;
+  margin-top: 50px;
+}
+
+.header {
+  background-color: #d0f0f1;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  z-index: 5;
+}
+
+#label-and-icon {
+  width: 200px;
+  font-size: 20px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+#img-account {
+  width: 70px;
+  margin-left: 15px;
+  margin-right: 100px;
+}
+
+.search-filters {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-color: rgba(230, 249, 247, 0.8);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+  height: 7rem;
+  text-align: center;
+}
+
+.filter select {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 14px;
+  width: 110%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  appearance: none;
+  margin: 10px;
+}
+
+.filter select:focus {
+  border-color: #66afe9;
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.filter select option[value=""][disabled] {
+  display: none;
+}
+
+#filter-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-departure-date-interval {
+  margin: auto;
+}
+
+.check-departure-date-checkbox-and-label {
+  display: flex;
+  text-align: center;
+  margin: 10px;
+}
+
+.dates {
+  margin: auto;
+  margin-left: 20px;
+}
+
+#departure-date {
+  height: 1.7rem;
+}
+
+#departure-date-start,
+#departure-date-end {
+  height: 1.7rem;
+  margin-bottom: 5px;
+}
+
+.button {
+  background-color: rgba(68, 161, 177, 0.8);
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 45px;
+  animation: moveInBottom 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  width: 80%;
+  padding: 20px;
+  background-color: rgba(230, 249, 247, 0.8);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.route-container {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background-color: rgba(248, 255, 254, 0.8);
+}
+
+.route-container p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 15px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header {
+  background-color: rgba(230, 249, 247, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  width: 12rem;
+  height: 61px;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.card-header-price {
+  background-color: rgba(230, 249, 247, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  width: 12rem;
+  height: 61px;
+  font-size: 16pt;
+  margin-left: 20px;
+  margin-right: auto;
+  line-height: 42px;
+}
+
+.card-header-price h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.card-header-right h {
+  color: rgb(241, 143, 143);
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.points {
+  display: flex;
+  margin: 20px;
+}
+
+.points div {
+  margin: auto;
+}
+
+.departure-destination {
+  background-color: rgba(230, 249, 247, 0.8);
+  width: 300px;
+  padding: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+}
+
+.departure-destination h2 {
+  margin: 5px;
+}
+
+.time-in-route-arrow {
+  display: grid;
+}
+
+.time-in-route-arrow h2,
+svg {
+  margin: 0px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.card-body button {
+  width: 250px;
+  height: 45px;
+}
+
+.transport-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.card-header h3 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.input-group {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center; /* Центрируем содержимое .input-group */
+  align-items: center;
+}
+
+#label-and-checkbox-baggage {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Вертикальное выравнивание чекбокса и текста */
+  gap: 8px; /* Отступ между чекбоксом и текстом */
+}
+
+#label-and-checkbox-baggage input[type="checkbox"] {
+  margin: 0; /* Убираем стандартные отступы чекбокса */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#label-and-checkbox-baggage span {
+  font-size: 16px;
+  color: #333;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #44a1b1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #368999;
+}
+
+.low-seats {
+  color: rgb(241, 143, 143);
+  margin-left: 5px;
+}
+
+.warning-message {
+  color: rgb(241, 143, 143);
+  font-weight: bold;
+}
+
+.disabled-button {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.disabled-button:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.pagination button{
+  margin-left: 10pt;
+  margin-right: 10pt;
+  margin-top: 20pt;
+  background-color: #F3FDFC;
+  color: #1f626ccc;
+  border-radius: 10pt;
+  width: 80pt;
+  font-size: 13pt;
+}
+
+.pagination span {
+  font-size: 13pt;
+  margin-top: 27pt;
+}

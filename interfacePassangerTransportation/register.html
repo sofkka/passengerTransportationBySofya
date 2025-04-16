@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/icon_gps.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleAccount.css">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <a href="index.html">
+                <img src="images/icon_project.png" alt="Иконка" id="label-and-icon">
+            </a>
+        </div>
+    </div>
+
+    <div class="account-container">
+        <h2>Регистрация</h2>
+        <div class="input-group">
+            <label>Логин:</label>
+            <input type="text" id="reg-login" placeholder="Введите логин" required>
+        </div>
+        <div class="input-group">
+            <label>Пароль:</label>
+            <input type="password" id="reg-password" placeholder="Введите пароль" required>
+            <span class="toggle-password" onclick="togglePassword('reg-password')">👁️</span>
+        </div>
+        <div class="input-group">
+            <label>Повторите пароль:</label>
+            <input type="password" id="reg-password-confirm" placeholder="Повторите пароль" required>
+            <span class="toggle-password" onclick="togglePassword('reg-password-confirm')">👁️</span>
+        </div>
+        <div class="input-group">
+            <label>Имя:</label>
+            <input type="text" id="reg-name" placeholder="Введите имя" required>
+        </div>
+        <div class="input-group">
+            <label>Фамилия:</label>
+            <input type="text" id="reg-surname" placeholder="Введите фамилию" required>
+        </div>
+        <div class="input-group">
+            <label>Отчество:</label>
+            <input type="text" id="reg-patronymic" placeholder="Введите отчество">
+        </div>
+        <div class="input-group">
+            <label>Номер телефона:</label>
+            <input type="tel" id="reg-phone" placeholder="+7 (999)-999-99-99" required>
+        </div>
+        <button class="button" id="button-register">Зарегистрироваться</button>
+        <div class="links">
+            <a href="login.html">Уже есть аккаунт? Войти</a>
+        </div>
+    </div>
+
+    <script src="register.js" defer></script>
+</body>
+</html>
